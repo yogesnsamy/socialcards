@@ -4,13 +4,11 @@ import logo from '../images/logo.png'; // Tell Webpack this JS file uses this im
 const Logo = () => {
   return (
     <div>
-      <img
-        className='ui top aligned tiny image'
-        src={logo}
-        alt='company logo'
-      />
+      {' '}
+      <img src={logo} alt='company logo' style={{ width: '100%' }} />
     </div>
   );
+  // <img src={logo} alt='company logo' />;
 };
 
 export default Logo;

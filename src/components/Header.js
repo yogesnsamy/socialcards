@@ -2,14 +2,13 @@ import React from 'react';
 
 const Header = props => {
   return (
-    <div className='card'>
-      <div className='content'>
-        <div className='header'>
-          <strong>{props.details.name}</strong> {props.details.handle}
-        </div>
-        <div className='meta'>{props.details.subject}</div>
-        <div className='description'>author: @{props.details.author}</div>
-      </div>
+    <div class='card-body'>
+      <h5 class='card-title'>
+        {' '}
+        {props.details.name} {props.details.handle}
+      </h5>
+      <p class='card-text'>{props.details.subject}</p>
+      <p class='card-text'>author: @{props.details.author}</p>
     </div>
   );
 };

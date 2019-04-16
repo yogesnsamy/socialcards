@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './Card';
 import Logo from './Logo';
 import Header from './Header';
 import Content from './Content';
@@ -6,35 +7,33 @@ import Interaction from './Interaction';
 
 class App extends React.Component {
   render() {
-    const details = {
-      name: 'yoges',
-      handle: 'cicakYog',
-      subject: 'how to be a millionair in 30 days',
-      author: 'yoursTruly'
-    };
-
+    const details = [
+      {
+        name: 'yoges',
+        handle: 'cicakYog',
+        subject: 'how to be a millionair in 30 days',
+        author: 'yoursTruly',
+        engagement: {
+          chat: 22,
+          rt: 0,
+          likes: 50
+        }
+      },
+      {
+        name: 'bala',
+        handle: 'bolaBa',
+        subject: 'permainan bola sepak terhebat di dunia',
+        author: 'balansmay',
+        engagement: {
+          chat: 9,
+          rt: 10,
+          likes: 84
+        }
+      }
+    ];
     return (
-      <div className='ui grid'>
-        <div className='four column row'>
-          <div className='four wide column'>
-            <Logo />
-          </div>
-          <div className='twelve wide column'>
-            <Header details={details} />
-          </div>
-        </div>
-        <div className='four column row'>
-          <div className='right floated column' />
-          <div className='four wide column' />
-          <div className='twelve wide column'>
-            <Content subject={details.subject} />
-          </div>
-        </div>
-        <div className='four column row'>
-          <div className='left floated column'>
-            <Interaction />
-          </div>
-        </div>
+      <div className='container'>
+        <Card details={details} />
       </div>
     );
   }
